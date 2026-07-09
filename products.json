@@ -1,0 +1,322 @@
+[
+  {
+    "id": "1",
+    "name": "Smart TV Google QLED 55\\",
+    "price": 190000,
+    "brand": "SAMSUNG",
+    "image": "images/products/samsung-smart-tv-google-qled-55.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "2",
+    "name": "Smart TV Google 43\\",
+    "price": 105000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-smart-tv-google-43-android-14.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "3",
+    "name": "Smart TV Google WebOS 65\\",
+    "price": 305000,
+    "brand": "LG",
+    "image": "images/products/lg-smart-tv-google-webos-65.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "4",
+    "name": "Smart TV Google 85\\",
+    "price": 585000,
+    "brand": "SAMSUNG",
+    "image": "images/products/samsung-smart-tv-google-85-ultra-hd.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "tv-32",
+    "name": "Smart TV Google 32\\",
+    "price": 70000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-smart-tv-google-43-android-14.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "tv-53",
+    "name": "Smart TV Google 53\\",
+    "price": 175000,
+    "brand": "ROCH",
+    "image": "images/products/samsung-smart-tv-google-qled-55.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "tv-58",
+    "name": "Smart TV Google 58\\",
+    "price": 205000,
+    "brand": "HISENSE",
+    "image": "images/products/lg-smart-tv-google-webos-65.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "tv-75",
+    "name": "Smart TV Google 75\\",
+    "price": 430000,
+    "brand": "LG",
+    "image": "images/products/samsung-smart-tv-google-85-ultra-hd.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "5",
+    "name": "Système Home Cinéma Woofer Roch 5.1",
+    "price": 45000,
+    "brand": "ROCH",
+    "image": "images/products/roch-systeme-home-cinema-woofer-roch-51.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "6",
+    "name": "Enceinte Woofer Roch portable",
+    "price": 18000,
+    "brand": "ROCH",
+    "image": "images/products/roch-enceinte-woofer-roch-portable.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "7",
+    "name": "Enceinte Woofer Roch 2.1 Soundbar",
+    "price": 35000,
+    "brand": "ROCH",
+    "image": "images/products/roch-enceinte-woofer-roch-21-soundbar.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "8",
+    "name": "Réfrigérateur Smart 4 portes Inox 450L",
+    "price": 680000,
+    "brand": "LG",
+    "image": "images/products/lg-refrigerateur-smart-4-portes-inox-450l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "9",
+    "name": "Réfrigérateur Astech avec Fontaine 250L",
+    "price": 185000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-refrigerateur-astech-avec-fontaine-250l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "10",
+    "name": "Réfrigérateur Double Porte Roch 220L",
+    "price": 135000,
+    "brand": "ROCH",
+    "image": "images/products/roch-refrigerateur-double-porte-roch-220l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "11",
+    "name": "Réfrigérateur Smart Double Porte 350L",
+    "price": 245000,
+    "brand": "SMART",
+    "image": "images/products/smart-refrigerateur-smart-double-porte-350l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "12",
+    "name": "Vitrine Réfrigérée Smart Beverage Cooler",
+    "price": 285000,
+    "brand": "SMART",
+    "image": "images/products/smart-vitrine-refrigeree-smart-beverage-cooler.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "13",
+    "name": "Réfrigérateur compact Sharp 195L",
+    "price": 148000,
+    "brand": "SHARP",
+    "image": "images/products/sharp-refrigerateur-compact-sharp-195l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "14",
+    "name": "Smart TV Google 46\\",
+    "price": 115000,
+    "brand": "SMART",
+    "image": "images/products/smart-smart-tv-google-46-full-hd.webp",
+    "category": "tvs"
+  },
+  {
+    "id": "15",
+    "name": "Réfrigérateur Astech Double Porte 160L",
+    "price": 110000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-refrigerateur-astech-double-porte-160l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "16",
+    "name": "Congélateur Coffre Hisense 250L",
+    "price": 165000,
+    "brand": "HISENSE",
+    "image": "images/products/hisense-congelateur-coffre-hisense-250l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "17",
+    "name": "Congélateur Coffre Roch 150L",
+    "price": 115000,
+    "brand": "ROCH",
+    "image": "images/products/roch-congelateur-coffre-roch-150l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "18",
+    "name": "Congélateur Coffre Smart 300L",
+    "price": 175000,
+    "brand": "SMART",
+    "image": "images/products/smart-congelateur-coffre-smart-300l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "19",
+    "name": "Congélateur Coffre Roch 250L",
+    "price": 145000,
+    "brand": "ROCH",
+    "image": "images/products/roch-congelateur-coffre-roch-250l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "20",
+    "name": "Congélateur Smart vertical compact 100L",
+    "price": 95000,
+    "brand": "SMART",
+    "image": "images/products/smart-congelateur-smart-vertical-compact-100l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "21",
+    "name": "Congélateur Coffre Grand Modèle 400L",
+    "price": 210000,
+    "brand": "ROCH",
+    "image": "images/products/roch-congelateur-coffre-grand-modele-400l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "22",
+    "name": "Congélateur Coffre Astech 200L",
+    "price": 130000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-congelateur-coffre-astech-200l.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "23",
+    "name": "Machine à laver Deska Frontale 7kg",
+    "price": 155000,
+    "brand": "DESKA",
+    "image": "images/products/deska-machine-a-laver-deska-frontale-7kg.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "24",
+    "name": "Machine à laver Smart Frontale 8kg",
+    "price": 195000,
+    "brand": "SMART",
+    "image": "images/products/smart-machine-a-laver-smart-frontale-8kg.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "25",
+    "name": "Machine à laver Smart Semi-automatique 8kg",
+    "price": 135000,
+    "brand": "SMART",
+    "image": "images/products/smart-machine-a-laver-smart-semi-automatique-8kg.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "26",
+    "name": "Machine à laver Astech Frontale 8kg",
+    "price": 198000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-machine-a-laver-astech-frontale-8kg.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "27",
+    "name": "Machine à laver Smart Frontale 10kg",
+    "price": 290000,
+    "brand": "SMART",
+    "image": "images/products/smart-machine-a-laver-smart-frontale-10kg.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "28",
+    "name": "Cuisinière 4 feux Roch Inox",
+    "price": 78000,
+    "brand": "ROCH",
+    "image": "images/products/roch-cuisiniere-4-feux-roch-inox.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "29",
+    "name": "Cuisinière Smart 4 feux 50x50",
+    "price": 82000,
+    "brand": "SMART",
+    "image": "images/products/smart-cuisiniere-smart-4-feux-50x50.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "30",
+    "name": "Cuisinière Astech 4 feux Inox",
+    "price": 85000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-cuisiniere-astech-4-feux-inox.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "31",
+    "name": "Climatiseur Split LG 1.5 CV",
+    "price": 265000,
+    "brand": "LG",
+    "image": "images/products/lg-climatiseur-split-lg-15-cv.webp",
+    "category": "climatiseurs"
+  },
+  {
+    "id": "32",
+    "name": "Climatiseur Split Haier 1.5 CV",
+    "price": 215000,
+    "brand": "HAIER",
+    "image": "images/products/haier-climatiseur-split-haier-15-cv.webp",
+    "category": "climatiseurs"
+  },
+  {
+    "id": "33",
+    "name": "Climatiseur Split Astech 1.5 CV",
+    "price": 205000,
+    "brand": "ASTECH",
+    "image": "images/products/astech-climatiseur-split-astech-15-cv.webp",
+    "category": "climatiseurs"
+  },
+  {
+    "id": "34",
+    "name": "Fontaine Eau avec Réfrigérateur intégré",
+    "price": 85000,
+    "brand": "SMART",
+    "image": "images/products/smart-fontaine-eau-avec-refrigerateur-integre.webp",
+    "category": "refrigerators"
+  },
+  {
+    "id": "35",
+    "name": "Mixeur Blender Haier Inox 2 en 1",
+    "price": 18000,
+    "brand": "HAIER",
+    "image": "images/products/haier-mixeur-blender-haier-inox-2-en-1.webp",
+    "category": "washing_machines"
+  },
+  {
+    "id": "36",
+    "name": "Micro-ondes Digital Haier 20L",
+    "price": 45000,
+    "brand": "HAIER",
+    "image": "images/products/haier-micro-ondes-digital-haier-20l.webp",
+    "category": "washing_machines"
+  }
+]

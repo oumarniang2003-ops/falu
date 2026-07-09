@@ -1,0 +1,12 @@
+{
+  "name": "fall-business",
+  "version": "1.0.0",
+  "description": "Fall Business E-Commerce Platform",
+  "main": "index.html",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.3"
+  },
+  "scripts": {
+    "start": "echo 'Run locally by opening HTML files or running a static server'"
+  }
+}

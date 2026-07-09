@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Machines à Laver | NBS Electro</title>
-  <meta name="description" content="Découvrez nos machines à laver performantes et économiques aux meilleurs prix à Dakar. Retrait boutique ou livraison express.">
+  <title>Machines à Laver & Appareils de Cuisson à Dakar | Fall Business</title>
+  <meta name="description" content="Découvrez nos machines à laver, sèche-linge et cuisinières à Dakar chez Fall Business. Les meilleures marques au meilleur prix. Garantie incluse et livraison sous 24h.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://falu-xi.vercel.app/washing-machines.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://falu-xi.vercel.app/washing-machines.html">
+  <meta property="og:title" content="Machines à Laver & Appareils de Cuisson à Dakar | Fall Business">
+  <meta property="og:description" content="Découvrez nos machines à laver, sèche-linge et cuisinières à Dakar chez Fall Business. Les meilleures marques au meilleur prix. Garantie incluse et livraison sous 24h.">
+  <meta property="og:image" content="https://falu-xi.vercel.app/images/products/smart-machine-a-laver-smart-frontale-8kg.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://falu-xi.vercel.app/washing-machines.html">
+  <meta name="twitter:title" content="Machines à Laver & Appareils de Cuisson à Dakar | Fall Business">
+  <meta name="twitter:description" content="Découvrez nos machines à laver, sèche-linge et cuisinières à Dakar chez Fall Business. Les meilleures marques au meilleur prix. Garantie incluse et livraison sous 24h.">
+  <meta name="twitter:image" content="https://falu-xi.vercel.app/images/products/smart-machine-a-laver-smart-frontale-8kg.webp">
 </head>
 <body>
 
@@ -27,7 +42,7 @@
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        NBS <span>Electro</span>
+        Fall <span>Business</span>
       </a>
 
       <!-- Search bar -->
@@ -99,7 +114,7 @@
       <!-- Right Content Grid -->
       <div>
         <div class="section-header">
-          <h2 class="section-title" id="page-title">Machines à Laver / Lave-linges</h2>
+          <h1 class="section-title" id="page-title">Machines à Laver / Lave-linges</h1>
         </div>
         
         <div class="products-grid" id="category-products-list">
@@ -112,19 +127,20 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <h3>NBS Electro</h3>
+      <h3>Fall Business</h3>
       <p>Votre partenaire électroménager et high-tech de confiance à Dakar.</p>
       <p style="margin-top: 10px;">Hotline WhatsApp: +221 77 721 19 87 • Parcelles Assainies Unité 26</p>
-      <p style="margin-top: 24px; font-size: 11px; color: rgba(255, 255, 255, 0.5);">&copy; 2026 NBS Electro. Tous droits réservés.</p>
+      <p style="margin-top: 24px; font-size: 11px; color: rgba(255, 255, 255, 0.5);">&copy; 2026 Fall Business. Tous droits réservés.</p>
     </div>
   </footer>
 
   <div class="toast-container"></div>
 
-  <script src="js/app.js?v=2"></script>
+  <script src="js/app.js?v=2" defer></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       const container = document.getElementById('category-products-list');
+      await app.fetchProducts();
       const filtered = window.PRODUCTS.filter(p => p.category === 'washing_machines');
 
       filtered.forEach(p => {
@@ -170,6 +186,7 @@
         `;
         container.appendChild(card);
       });
+      app.injectProductSchema(filtered);
     });
   </script>
 </body>

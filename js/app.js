@@ -1,4 +1,4 @@
-// NBS Electro E-Commerce App Global JavaScript
+// Fall Business E-Commerce App Global JavaScript
 
 // Default Catalog Products
 const PRODUCTS = [
@@ -9,7 +9,7 @@ const PRODUCTS = [
     price: 190000,
     oldPrice: 220000,
     brand: "SAMSUNG",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.01 (1).jpeg",
+    image: "images/products/samsung-smart-tv-google-qled-55.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -21,7 +21,7 @@ const PRODUCTS = [
     price: 105000,
     oldPrice: 120000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.16.jpeg",
+    image: "images/products/astech-smart-tv-google-43-android-14.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 4,
@@ -33,7 +33,7 @@ const PRODUCTS = [
     price: 305000,
     oldPrice: 350000,
     brand: "LG",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.20 (1).jpeg",
+    image: "images/products/lg-smart-tv-google-webos-65.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -45,7 +45,7 @@ const PRODUCTS = [
     price: 585000,
     oldPrice: 650000,
     brand: "SAMSUNG",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.20 (2).jpeg",
+    image: "images/products/samsung-smart-tv-google-85-ultra-hd.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -57,7 +57,7 @@ const PRODUCTS = [
     price: 70000,
     oldPrice: 85000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.16.jpeg",
+    image: "images/products/astech-smart-tv-google-43-android-14.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 4,
@@ -69,7 +69,7 @@ const PRODUCTS = [
     price: 175000,
     oldPrice: 200000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.01 (1).jpeg",
+    image: "images/products/samsung-smart-tv-google-qled-55.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -81,7 +81,7 @@ const PRODUCTS = [
     price: 205000,
     oldPrice: 235000,
     brand: "HISENSE",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.20 (1).jpeg",
+    image: "images/products/lg-smart-tv-google-webos-65.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -93,7 +93,7 @@ const PRODUCTS = [
     price: 430000,
     oldPrice: 490000,
     brand: "LG",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.20 (2).jpeg",
+    image: "images/products/samsung-smart-tv-google-85-ultra-hd.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -105,7 +105,7 @@ const PRODUCTS = [
     price: 45000,
     oldPrice: 55000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.17.jpeg",
+    image: "images/products/roch-systeme-home-cinema-woofer-roch-51.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -117,7 +117,7 @@ const PRODUCTS = [
     price: 18000,
     oldPrice: 24000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.18.jpeg",
+    image: "images/products/roch-enceinte-woofer-roch-portable.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 4,
@@ -129,7 +129,7 @@ const PRODUCTS = [
     price: 35000,
     oldPrice: 42000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.20.jpeg",
+    image: "images/products/roch-enceinte-woofer-roch-21-soundbar.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 5,
@@ -143,7 +143,7 @@ const PRODUCTS = [
     price: 680000,
     oldPrice: 750000,
     brand: "LG",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.00.jpeg",
+    image: "images/products/lg-refrigerateur-smart-4-portes-inox-450l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -155,7 +155,7 @@ const PRODUCTS = [
     price: 185000,
     oldPrice: 210000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.01.jpeg",
+    image: "images/products/astech-refrigerateur-astech-avec-fontaine-250l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -167,7 +167,7 @@ const PRODUCTS = [
     price: 135000,
     oldPrice: 155000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.02 (1).jpeg",
+    image: "images/products/roch-refrigerateur-double-porte-roch-220l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -179,7 +179,7 @@ const PRODUCTS = [
     price: 245000,
     oldPrice: 280000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.02.jpeg",
+    image: "images/products/smart-refrigerateur-smart-double-porte-350l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -191,7 +191,7 @@ const PRODUCTS = [
     price: 285000,
     oldPrice: 320000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.05 (1).jpeg",
+    image: "images/products/smart-vitrine-refrigeree-smart-beverage-cooler.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -203,7 +203,7 @@ const PRODUCTS = [
     price: 148000,
     oldPrice: 165000,
     brand: "SHARP",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.10.jpeg",
+    image: "images/products/sharp-refrigerateur-compact-sharp-195l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -215,7 +215,7 @@ const PRODUCTS = [
     price: 115000,
     oldPrice: 135000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.15 (1).jpeg",
+    image: "images/products/smart-smart-tv-google-46-full-hd.webp",
     category: "tvs",
     categoryDisplay: "Télévisions & Son",
     rating: 4,
@@ -227,7 +227,7 @@ const PRODUCTS = [
     price: 110000,
     oldPrice: 125000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.15.jpeg",
+    image: "images/products/astech-refrigerateur-astech-double-porte-160l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -239,7 +239,7 @@ const PRODUCTS = [
     price: 165000,
     oldPrice: 185000,
     brand: "HISENSE",
-    image: "images/WhatsApp Image 2026-07-04 at 17.36.57.jpeg",
+    image: "images/products/hisense-congelateur-coffre-hisense-250l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -251,7 +251,7 @@ const PRODUCTS = [
     price: 115000,
     oldPrice: 130000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.36.59.jpeg",
+    image: "images/products/roch-congelateur-coffre-roch-150l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -263,7 +263,7 @@ const PRODUCTS = [
     price: 175000,
     oldPrice: 195000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.05 (2).jpeg",
+    image: "images/products/smart-congelateur-coffre-smart-300l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -275,7 +275,7 @@ const PRODUCTS = [
     price: 145000,
     oldPrice: 165000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.07.jpeg",
+    image: "images/products/roch-congelateur-coffre-roch-250l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -287,7 +287,7 @@ const PRODUCTS = [
     price: 95000,
     oldPrice: 110000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.09 (1).jpeg",
+    image: "images/products/smart-congelateur-smart-vertical-compact-100l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -299,7 +299,7 @@ const PRODUCTS = [
     price: 210000,
     oldPrice: 240000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.09.jpeg",
+    image: "images/products/roch-congelateur-coffre-grand-modele-400l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 5,
@@ -311,7 +311,7 @@ const PRODUCTS = [
     price: 130000,
     oldPrice: 145000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.14.jpeg",
+    image: "images/products/astech-congelateur-coffre-astech-200l.webp",
     category: "refrigerators",
     categoryDisplay: "Réfrigérateurs & Congélateurs",
     rating: 4,
@@ -325,7 +325,7 @@ const PRODUCTS = [
     price: 155000,
     oldPrice: 180000,
     brand: "DESKA",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.10 (1).jpeg",
+    image: "images/products/deska-machine-a-laver-deska-frontale-7kg.webp",
     category: "washing_machines",
     categoryDisplay: "Machines à Laver",
     rating: 4,
@@ -337,7 +337,7 @@ const PRODUCTS = [
     price: 195000,
     oldPrice: 220000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.14 (1).jpeg",
+    image: "images/products/smart-machine-a-laver-smart-frontale-8kg.webp",
     category: "washing_machines",
     categoryDisplay: "Machines à Laver",
     rating: 5,
@@ -349,7 +349,7 @@ const PRODUCTS = [
     price: 135000,
     oldPrice: 150000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.14 (2).jpeg",
+    image: "images/products/smart-machine-a-laver-smart-semi-automatique-8kg.webp",
     category: "washing_machines",
     categoryDisplay: "Machines à Laver",
     rating: 4,
@@ -361,7 +361,7 @@ const PRODUCTS = [
     price: 198000,
     oldPrice: 225000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.16 (1).jpeg",
+    image: "images/products/astech-machine-a-laver-astech-frontale-8kg.webp",
     category: "washing_machines",
     categoryDisplay: "Machines à Laver",
     rating: 5,
@@ -373,7 +373,7 @@ const PRODUCTS = [
     price: 290000,
     oldPrice: 320000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.19 (1).jpeg",
+    image: "images/products/smart-machine-a-laver-smart-frontale-10kg.webp",
     category: "washing_machines",
     categoryDisplay: "Machines à Laver",
     rating: 5,
@@ -385,7 +385,7 @@ const PRODUCTS = [
     price: 78000,
     oldPrice: 90000,
     brand: "ROCH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.36.56 (1).jpeg",
+    image: "images/products/roch-cuisiniere-4-feux-roch-inox.webp",
     category: "washing_machines",
     categoryDisplay: "Cuisinières & Cuisson",
     rating: 4,
@@ -397,7 +397,7 @@ const PRODUCTS = [
     price: 82000,
     oldPrice: 95000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.04.jpeg",
+    image: "images/products/smart-cuisiniere-smart-4-feux-50x50.webp",
     category: "washing_machines",
     categoryDisplay: "Cuisinières & Cuisson",
     rating: 5,
@@ -409,7 +409,7 @@ const PRODUCTS = [
     price: 85000,
     oldPrice: 100000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.05.jpeg",
+    image: "images/products/astech-cuisiniere-astech-4-feux-inox.webp",
     category: "washing_machines",
     categoryDisplay: "Cuisinières & Cuisson",
     rating: 5,
@@ -423,7 +423,7 @@ const PRODUCTS = [
     price: 265000,
     oldPrice: 295000,
     brand: "LG",
-    image: "images/WhatsApp Image 2026-07-04 at 17.36.51.jpeg",
+    image: "images/products/lg-climatiseur-split-lg-15-cv.webp",
     category: "climatiseurs",
     categoryDisplay: "Climatisation",
     rating: 5,
@@ -435,7 +435,7 @@ const PRODUCTS = [
     price: 215000,
     oldPrice: 240000,
     brand: "HAIER",
-    image: "images/WhatsApp Image 2026-07-04 at 17.36.56.jpeg",
+    image: "images/products/haier-climatiseur-split-haier-15-cv.webp",
     category: "climatiseurs",
     categoryDisplay: "Climatisation",
     rating: 5,
@@ -447,7 +447,7 @@ const PRODUCTS = [
     price: 205000,
     oldPrice: 230000,
     brand: "ASTECH",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.00 (1).jpeg",
+    image: "images/products/astech-climatiseur-split-astech-15-cv.webp",
     category: "climatiseurs",
     categoryDisplay: "Climatisation",
     rating: 4,
@@ -459,7 +459,7 @@ const PRODUCTS = [
     price: 85000,
     oldPrice: 98000,
     brand: "SMART",
-    image: "images/WhatsApp Image 2026-07-04 at 17.36.57 (1).jpeg",
+    image: "images/products/smart-fontaine-eau-avec-refrigerateur-integre.webp",
     category: "refrigerators",
     categoryDisplay: "Distributeur Eau",
     rating: 4,
@@ -471,7 +471,7 @@ const PRODUCTS = [
     price: 18000,
     oldPrice: 25000,
     brand: "HAIER",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.18 (1).jpeg",
+    image: "images/products/haier-mixeur-blender-haier-inox-2-en-1.webp",
     category: "washing_machines",
     categoryDisplay: "Petit Électroménager",
     rating: 5,
@@ -483,7 +483,7 @@ const PRODUCTS = [
     price: 45000,
     oldPrice: 55000,
     brand: "HAIER",
-    image: "images/WhatsApp Image 2026-07-04 at 17.37.19.jpeg",
+    image: "images/products/haier-micro-ondes-digital-haier-20l.webp",
     category: "washing_machines",
     categoryDisplay: "Petit Électroménager",
     rating: 4,
@@ -496,7 +496,7 @@ window.PRODUCTS = PRODUCTS;
 
 class ECommerceApp {
   constructor() {
-    this.cartKey = 'nbs_electro_cart';
+    this.cartKey = 'fall_business_cart';
     this.cart = this.loadCart();
     this.init();
   }
@@ -505,6 +505,21 @@ class ECommerceApp {
     document.addEventListener('DOMContentLoaded', () => {
       this.updateCartBadge();
     });
+  }
+
+  async fetchProducts() {
+    try {
+      const res = await fetch('/api/products');
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          window.PRODUCTS = data;
+          console.log("Products successfully loaded from Postgres database API!");
+        }
+      }
+    } catch (e) {
+      console.warn("Failed to fetch products from database API, using local hardcoded fallback products array.", e);
+    }
   }
 
   // Load cart items from localStorage
@@ -639,6 +654,57 @@ class ECommerceApp {
         toast.remove();
       }, 300);
     }, 3000);
+  }
+
+  // Dynamically inject Schema.org JSON-LD Product structures for SEO
+  injectProductSchema(products) {
+    // Remove any existing dynamic product schema
+    const existing = document.getElementById('dynamic-product-schema');
+    if (existing) {
+      existing.remove();
+    }
+
+    if (!products || products.length === 0) return;
+
+    const itemListElement = products.map((p, index) => {
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": p.name,
+          "image": window.location.origin + '/' + p.image,
+          "description": `${p.name} par ${p.brand}. Appareil électroménager disponible à Dakar chez Fall Business. Garantie constructeur incluse.`,
+          "brand": {
+            "@type": "Brand",
+            "name": p.brand
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "XOF",
+            "price": p.price,
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2027-12-31",
+            "url": window.location.href
+          }
+        }
+      };
+    });
+
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": document.title,
+      "numberOfItems": products.length,
+      "itemListElement": itemListElement
+    };
+
+    const script = document.createElement('script');
+    script.id = 'dynamic-product-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData, null, 2);
+    document.head.appendChild(script);
   }
 }
 

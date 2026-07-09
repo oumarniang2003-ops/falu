@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Panier | NBS Electro</title>
-  <meta name="description" content="Gérez votre panier d'achat. Renseignez vos détails de livraison et confirmez votre commande.">
+  <title>Mon Panier d'Achat | Fall Business Dakar</title>
+  <meta name="description" content="Finalisez votre commande d'appareils électroménagers chez Fall Business. Remplissez vos coordonnées pour une livraison rapide à Dakar ou un retrait en boutique.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://falu-xi.vercel.app/cart.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://falu-xi.vercel.app/cart.html">
+  <meta property="og:title" content="Mon Panier d'Achat | Fall Business Dakar">
+  <meta property="og:description" content="Finalisez votre commande d'appareils électroménagers chez Fall Business. Remplissez vos coordonnées pour une livraison rapide à Dakar ou un retrait en boutique.">
+  <meta property="og:image" content="https://falu-xi.vercel.app/images/products/samsung-smart-tv-google-qled-55.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://falu-xi.vercel.app/cart.html">
+  <meta name="twitter:title" content="Mon Panier d'Achat | Fall Business Dakar">
+  <meta name="twitter:description" content="Finalisez votre commande d'appareils électroménagers chez Fall Business. Remplissez vos coordonnées pour une livraison rapide à Dakar ou un retrait en boutique.">
+  <meta name="twitter:image" content="https://falu-xi.vercel.app/images/products/samsung-smart-tv-google-qled-55.webp">
 </head>
 <body>
 
@@ -28,7 +43,7 @@
     <div class="container header-inner">
       <!-- Logo -->
       <a href="index.html" class="logo">
-        NBS <span>Electro</span>
+        Fall <span>Business</span>
       </a>
 
       <!-- Search bar -->
@@ -99,7 +114,7 @@
       
       <!-- Left Column: Items List -->
       <div class="cart-card">
-        <h2 class="cart-title">Articles dans votre panier</h2>
+        <h1 class="cart-title">Articles dans votre panier</h1>
         <div class="cart-items-list" id="cart-items-list">
           <!-- Dynamically populated -->
         </div>
@@ -178,6 +193,16 @@
             </div>
 
             <div class="form-group">
+              <label for="cust-payment">Mode de paiement *</label>
+              <select id="cust-payment" class="form-control" required>
+                <option value="" disabled selected>Choisir un moyen de paiement...</option>
+                <option value="Wave">Wave</option>
+                <option value="Orange Money">Orange Money</option>
+                <option value="espèces">Espèces (à la livraison / retrait)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
               <label for="cust-notes">Notes additionnelles (facultatif)</label>
               <textarea id="cust-notes" class="form-control" rows="2" placeholder="Ex: Appeler avant de livrer..."></textarea>
             </div>
@@ -209,6 +234,7 @@
         <div class="receipt-row"><span>Client :</span><strong id="receipt-name">-</strong></div>
         <div class="receipt-row"><span>Téléphone :</span><strong id="receipt-phone">-</strong></div>
         <div class="receipt-row"><span>Option :</span><strong id="receipt-mode">-</strong></div>
+        <div class="receipt-row"><span>Paiement :</span><strong id="receipt-payment">-</strong></div>
         <div class="receipt-row" id="receipt-zone-row"><span>Zone :</span><strong id="receipt-zone">-</strong></div>
         <div class="receipt-row" id="receipt-address-row"><span>Adresse :</span><strong id="receipt-address">-</strong></div>
         
@@ -239,7 +265,7 @@
   <div class="toast-container"></div>
 
   <!-- LOAD APPLICATION STATE -->
-  <script src="js/app.js?v=1"></script>
+  <script src="js/app.js?v=1" defer></script>
   <script>
     let deliveryMode = 'pickup'; // default
     let deliveryPrices = {};
@@ -380,7 +406,7 @@
       document.getElementById('summary-total').textContent = app.formatPrice(grandTotal);
     }
 
-    function handleCheckout(e) {
+    async function handleCheckout(e) {
       e.preventDefault();
       
       if (deliveryMode === 'delivery' && !zoneSelect.value) {
@@ -393,6 +419,7 @@
       const phone = document.getElementById('cust-phone').value.trim();
       const address = custAddress.value.trim();
       const notes = document.getElementById('cust-notes').value.trim() || 'Aucune';
+      const paymentMethod = document.getElementById('cust-payment').value;
       const subtotal = app.getCartSubtotal();
       const grandTotal = subtotal + activeShippingFee;
 
@@ -400,6 +427,7 @@
       document.getElementById('receipt-name').textContent = name;
       document.getElementById('receipt-phone').textContent = phone;
       document.getElementById('receipt-mode').textContent = deliveryMode === 'pickup' ? 'Retrait magasin 🏪' : 'Livraison à domicile 🛵';
+      document.getElementById('receipt-payment').textContent = paymentMethod;
       
       const receiptZoneRow = document.getElementById('receipt-zone-row');
       const receiptAddressRow = document.getElementById('receipt-address-row');
@@ -435,7 +463,7 @@
       document.getElementById('receipt-total').textContent = app.formatPrice(grandTotal);
 
       // Build WhatsApp Pre-filled message
-      let message = `*NOUVELLE COMMANDE NBS ELECTRO*\n`;
+      let message = `*NOUVELLE COMMANDE FALL BUSINESS*\n`;
       message += `===============================\n\n`;
       message += `👤 *Client:* ${name}\n`;
       message += `📞 *Téléphone:* ${phone}\n`;
@@ -446,6 +474,7 @@
         message += `🏠 *Adresse:* ${address}\n`;
       }
       
+      message += `💳 *Paiement:* ${paymentMethod}\n`;
       message += `📝 *Notes:* ${notes}\n\n`;
       message += `🛒 *ARTICLES COMMANDÉS:*\n${textMessageItems}\n`;
       message += `===============================\n`;
@@ -456,6 +485,38 @@
       message += `_Merci pour votre confiance ! Nous traiterons votre commande rapidement._`;
 
       whatsAppMessageText = message;
+
+      // Save to Postgres Database via Serverless API
+      try {
+        app.showToast("Enregistrement de votre commande...", "info");
+        const orderPromises = app.cart.map(item => {
+          return fetch('/api/orders', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              customer_name: name,
+              customer_phone: phone,
+              customer_address: deliveryMode === 'delivery' ? `${zoneSelect.value} - ${address}` : 'Retrait boutique',
+              product_id: parseInt(item.id),
+              quantity: item.quantity,
+              payment_method: paymentMethod
+            })
+          });
+        });
+
+        const responses = await Promise.all(orderPromises);
+        const failed = responses.filter(r => !r.ok);
+        if (failed.length > 0) {
+          app.showToast("Commande validée localement.", "warning");
+        } else {
+          app.showToast("Commande enregistrée en base de données !", "success");
+        }
+      } catch (error) {
+        console.error("Error saving orders to DB:", error);
+        app.showToast("Commande validée (mode hors ligne).", "warning");
+      }
 
       // Show success receipt modal
       document.getElementById('success-modal').classList.add('active');
