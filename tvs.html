@@ -28,12 +28,12 @@
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-left">
-        <span class="topbar-item">📞 Hotline: <strong>+221 77 721 19 87</strong></span>
+        <span class="topbar-item">📞 Hotline: <strong>+221 77 577 03 25</strong></span>
         <span class="topbar-item">🕒 Lun-Sam: 9h00 - 20h00</span>
         <span class="topbar-item">📍 Dakar, Sénégal</span>
       </div>
       <div class="topbar-right">
-        <a href="https://wa.me/221777211987" target="_blank">💬 Commander par WhatsApp</a>
+        <a href="https://wa.me/221775770325" target="_blank">💬 Commander par WhatsApp</a>
       </div>
     </div>
   </div>
@@ -129,7 +129,7 @@
     <div class="container">
       <h3>Fall Business</h3>
       <p>Votre partenaire électroménager et high-tech de confiance à Dakar.</p>
-      <p style="margin-top: 10px;">Hotline WhatsApp: +221 77 721 19 87 • Parcelles Assainies Unité 26</p>
+      <p style="margin-top: 10px;">Hotline WhatsApp: +221 77 577 03 25 • Keur Massar</p>
       <p style="margin-top: 24px; font-size: 11px; color: rgba(255, 255, 255, 0.5);">&copy; 2026 Fall Business. Tous droits réservés.</p>
     </div>
   </footer>
@@ -170,12 +170,12 @@
 
         card.innerHTML = `
           ${badgeHtml}
-          <div class="product-img-wrapper">
+          <div class="product-img-wrapper" style="cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
             <img class="product-img" src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/400x300?text=Television'">
           </div>
           <div class="product-body">
             <span class="product-brand">${p.brand}</span>
-            <h3 class="product-name"><a href="#">${p.name}</a></h3>
+            <h3 class="product-name"><a href="product.html?id=${p.id}">${p.name}</a></h3>
             <div class="product-rating">${starsHtml}</div>
             <div class="product-price-container">${priceHtml}</div>
             <button class="btn btn-primary" onclick="app.addToCart('${p.id}', 1)">

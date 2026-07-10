@@ -31,11 +31,11 @@
     "image": "https://falu-xi.vercel.app/images/products/samsung-smart-tv-google-qled-55.webp",
     "@id": "https://falu-xi.vercel.app/#store",
     "url": "https://falu-xi.vercel.app/index.html",
-    "telephone": "+221777211987",
+    "telephone": "+221775770325",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Parcelles Assainies Unité 26",
+      "streetAddress": "Keur Massar",
       "addressLocality": "Dakar",
       "addressCountry": "SN"
     },
@@ -68,12 +68,12 @@
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-left">
-        <span class="topbar-item">📞 Hotline: <strong>+221 77 721 19 87</strong></span>
+        <span class="topbar-item">📞 Hotline: <strong>+221 77 577 03 25</strong></span>
         <span class="topbar-item">🕒 Lun-Sam: 9h00 - 20h00</span>
         <span class="topbar-item">📍 Dakar, Sénégal</span>
       </div>
       <div class="topbar-right">
-        <a href="https://wa.me/221777211987" target="_blank">💬 Commander par WhatsApp</a>
+        <a href="https://wa.me/221775770325" target="_blank">💬 Commander par WhatsApp</a>
       </div>
     </div>
   </div>
@@ -90,14 +90,14 @@
 
       <!-- Unified search bar -->
       <div class="header-search">
-        <select id="search-category" class="search-category-select">
+        <select id="search-category" class="search-category-select" onchange="filterCatalog()">
           <option value="all">Tous les produits</option>
           <option value="refrigerators">Réfrigérateurs & Congélateurs</option>
           <option value="washing_machines">Machines à Laver & Cuisson</option>
           <option value="tvs">Télévisions & Son</option>
           <option value="climatiseurs">Climatiseurs & Splits</option>
         </select>
-        <input type="text" id="search-query" class="search-input" placeholder="Rechercher un appareil, une marque...">
+        <input type="text" id="search-query" class="search-input" placeholder="Rechercher un appareil, une marque..." onkeydown="if(event.key==='Enter') filterCatalog()">
         <button class="search-btn" onclick="filterCatalog()">
           <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
         </button>
@@ -216,6 +216,20 @@
       </div>
     </div>
 
+    <!-- SEARCH RESULTS HEADER -->
+    <div id="search-results-header" style="display: none; margin-bottom: 24px; padding: 10px 0; border-bottom: 1px solid var(--border);">
+      <h2 style="font-size: 22px; font-weight: 700; color: var(--text-dark);">
+        Résultats de la recherche <span id="search-term-display" style="color: var(--primary);"></span>
+      </h2>
+    </div>
+
+    <!-- NO PRODUCTS FOUND -->
+    <div id="no-products-found" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-white); border-radius: var(--radius-lg); border: 1px solid var(--border); margin-bottom: 40px;">
+      <h2 style="color: var(--text-dark); margin-bottom: 12px;">Aucun produit trouvé</h2>
+      <p style="color: var(--text-muted); margin-bottom: 24px;">Désolé, aucun appareil ne correspond à votre recherche. Essayez d'autres mots-clés.</p>
+      <button class="btn btn-primary" onclick="resetSearch()" style="display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 20px; border: none; font-weight: 600; cursor: pointer; border-radius: var(--radius-sm);">Réinitialiser la recherche</button>
+    </div>
+
     <!-- PRODUCT CATEGORY 1: REFRIGERATORS -->
     <section id="section-refrigerators-container" style="margin-bottom: 40px;">
       <div class="section-header">
@@ -262,7 +276,7 @@
     <div class="container">
       <h3>Fall Business</h3>
       <p>Votre partenaire électroménager et de confiance à Dakar.</p>
-      <p style="margin-top: 10px;">Hotline WhatsApp: +221 77 721 19 87 • Parcelles Assainies Unité 26</p>
+      <p style="margin-top: 10px;">Hotline WhatsApp: +221 77 577 03 25 • Keur Massar</p>
       <p style="margin-top: 24px; font-size: 11px; color: rgba(255, 255, 255, 0.5);">&copy; 2026 Fall Business. Tous droits réservés.</p>
     </div>
   </footer>
@@ -315,12 +329,45 @@
       const filtered = window.PRODUCTS.filter(p => {
         const matchesCategory = (categoryFilter === 'all' || p.category === categoryFilter);
         const matchesQuery = !searchQuery || 
-          p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-          p.brand.toLowerCase().includes(searchQuery.toLowerCase()) || 
-          p.categoryDisplay.toLowerCase().includes(searchQuery.toLowerCase());
+          (p.name && p.name.toLowerCase().includes(searchQuery.toLowerCase())) || 
+          (p.brand && p.brand.toLowerCase().includes(searchQuery.toLowerCase())) || 
+          (p.categoryDisplay && p.categoryDisplay.toLowerCase().includes(searchQuery.toLowerCase()));
         
         return matchesCategory && matchesQuery;
       });
+
+      // Toggle visibility of hero and search headers
+      const heroGrid = document.querySelector('.hero-grid');
+      const featuresBar = document.querySelector('.features-bar');
+      const resultsHeader = document.getElementById('search-results-header');
+      const termDisplay = document.getElementById('search-term-display');
+      const noProductsFound = document.getElementById('no-products-found');
+
+      const isFiltering = searchQuery !== '' || categoryFilter !== 'all';
+
+      if (isFiltering) {
+        if (heroGrid) heroGrid.style.display = 'none';
+        if (featuresBar) featuresBar.style.display = 'none';
+        if (resultsHeader) {
+          resultsHeader.style.display = 'block';
+          if (searchQuery) {
+            const catText = categoryFilter !== 'all' ? ` dans la catégorie "${searchCategorySelect.options[searchCategorySelect.selectedIndex].text}"` : '';
+            termDisplay.textContent = `pour "${searchQuery}"${catText}`;
+          } else {
+            termDisplay.textContent = `dans la catégorie "${searchCategorySelect.options[searchCategorySelect.selectedIndex].text}"`;
+          }
+        }
+      } else {
+        if (heroGrid) heroGrid.style.display = 'grid';
+        if (featuresBar) featuresBar.style.display = 'flex';
+        if (resultsHeader) resultsHeader.style.display = 'none';
+      }
+
+      if (filtered.length === 0) {
+        noProductsFound.style.display = 'block';
+      } else {
+        noProductsFound.style.display = 'none';
+      }
 
       // Show/Hide section headers if empty
       const hasRefrigerators = filtered.some(p => p.category === 'refrigerators');
@@ -363,12 +410,12 @@
 
         card.innerHTML = `
           ${badgeHtml}
-          <div class="product-img-wrapper">
+          <div class="product-img-wrapper" style="cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
             <img class="product-img" src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/400x300?text=Fall+Business'">
           </div>
           <div class="product-body">
             <span class="product-brand">${p.brand}</span>
-            <h3 class="product-name"><a href="#">${p.name}</a></h3>
+            <h3 class="product-name"><a href="product.html?id=${p.id}">${p.name}</a></h3>
             <div class="product-rating">${starsHtml}</div>
             <div class="product-price-container">${priceHtml}</div>
             <button class="btn btn-primary" onclick="app.addToCart('${p.id}', 1)">
@@ -397,8 +444,25 @@
       searchQuery = searchQueryInput.value.trim();
       renderCatalog();
       
-      // Scroll to view grid smoothly if catalog searched
-      document.getElementById('section-refrigerators-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const target = document.getElementById('search-results-header');
+      if (target && target.style.display !== 'none') {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        const firstSec = document.getElementById('section-refrigerators-container');
+        if (firstSec && firstSec.style.display !== 'none') {
+          firstSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    // Reset search parameters
+    function resetSearch() {
+      searchQueryInput.value = '';
+      searchQuery = '';
+      categoryFilter = 'all';
+      searchCategorySelect.value = 'all';
+      renderCatalog();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Triggered when category links in navigation are clicked
@@ -417,7 +481,10 @@
       });
 
       renderCatalog();
-      document.getElementById('section-refrigerators-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const target = document.getElementById('search-results-header');
+      if (target && target.style.display !== 'none') {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     // Live search on keyup
